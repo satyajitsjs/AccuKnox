@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "db93c7f6-37df-41b2-9d38-cfb18c37f4dd",
+		"name": "Friends",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32132238"
+	},
+	"item": [
+		{
+			"name": "friend-request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MDMzNTY0LCJpYXQiOjE3MTg5NDcxNjQsImp0aSI6ImYyNmZhNzJiNmJkNzQ4NWE5OGNiZjVlZjkxZDA3ZDU1IiwidXNlcl9pZCI6Mn0.EimOU-3A_VITrRGaVmnCHCa1UrYIV3hSgj9m_cMeLgU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to_user_id\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000//api/friend-request/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"friend-request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friends",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MDM0Mzc1LCJpYXQiOjE3MTg5NDc5NzUsImp0aSI6IjczMWVhMTE3NjAxMDQyNmFhZTg1ZTMxMzEzMDdlNTQzIiwidXNlcl9pZCI6NH0.J5GhkuN8YFE-RtFKYAOxK8jzvr-SCHv-3sztTWAIyq4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/friends/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friends",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pending Request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MDM0MTE5LCJpYXQiOjE3MTg5NDc3MTksImp0aSI6IjljZmRkYmY3NTlmYTQxYTc4MWE0OWRjZTY1Mjg3NTM5IiwidXNlcl9pZCI6NH0.PU-PrusB_l35nVvhZwIvdjGUOdYr_NEwG8TynEHZW88",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/pending-requests/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pending-requests",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friend Request Respond",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MDM0MTE5LCJpYXQiOjE3MTg5NDc3MTksImp0aSI6IjljZmRkYmY3NTlmYTQxYTc4MWE0OWRjZTY1Mjg3NTM5IiwidXNlcl9pZCI6NH0.PU-PrusB_l35nVvhZwIvdjGUOdYr_NEwG8TynEHZW88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request_id\":1,\n\t\t\"action\" : \"accept\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/friend-request/respond/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request",
+						"respond",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
