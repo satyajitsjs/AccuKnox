@@ -5,8 +5,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone <repo_url>
-   cd socialnetwork
+   git clone https://github.com/satyajitsjs/AccuKnox.git
+   cd AccuKnox
    ```
 
 2. Build and run the Docker containers:
@@ -18,7 +18,7 @@
 
 - `POST /api/signup/`
 - `POST /api/login/`
-- `GET /api/search/?query=`
+- `GET /api/search/?name=`
 - `POST /api/friend-request/`
 - `PUT /api/friend-request/respond/`
 - `GET /api/friends/`
@@ -36,7 +36,7 @@ Create a Postman collection with the following endpoints and export it as `postm
 
 - `POST /api/signup/`
 - `POST /api/login/`
-- `GET /api/search/?query=`
+- `GET /api/search/?name=`
 - `POST /api/friend-request/`
 - `PUT /api/friend-request/respond/`
 - `GET /api/friends/`

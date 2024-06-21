@@ -84,26 +84,6 @@ def login_user(request):
     else:
         return Response({'error': 'Only POST requests are allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
-@api_view(['POST'])
-@permission_classes([AllowAny])
-def get_access_token(request):
-    if request.method == "POST":
-        refresh_token = request.data.get('refresh_token')
-
-        if not refresh_token:
-            return Response({"error": "Refresh token is missing"}, status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            refresh_token_instance = RefreshToken(refresh_token)
-            access_token = str(refresh_token_instance.access_token)
-            Token = AuthToken.objects.get(refresh_token=refresh_token)
-            Token.access_token = access_token
-            Token.save()
-            return Response({"access_token": access_token}, status=status.HTTP_200_OK)
-        except Exception as e:
-            print(f"Error getting access token from refresh token: {e}")
-            return Response({"error": "Invalid refresh token"}, status=status.HTTP_400_BAD_REQUEST)
-
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
