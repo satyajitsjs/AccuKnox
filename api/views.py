@@ -88,7 +88,7 @@ def login_user(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def user_search(request):
-    query = request.query_params.get('name', '')
+    query = request.query_params.get('query', '')
     paginator = PageNumberPagination()
     paginator.page_size = 4
     users = User.objects.filter(Q(email__iexact=query) | Q(name__icontains=query))

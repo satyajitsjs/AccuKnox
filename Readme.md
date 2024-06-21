@@ -18,7 +18,7 @@
 
 - `POST /api/signup/`
 - `POST /api/login/`
-- `GET /api/search/?name=`
+- `GET /api/search/?query=`
 - `POST /api/friend-request/`
 - `PUT /api/friend-request/respond/`
 - `GET /api/friends/`
@@ -36,7 +36,7 @@ Create a Postman collection with the following endpoints and export it as `postm
 
 - `POST /api/signup/`
 - `POST /api/login/`
-- `GET /api/search/?name=`
+- `GET /api/search/?query=`
 - `POST /api/friend-request/`
 - `PUT /api/friend-request/respond/`
 - `GET /api/friends/`

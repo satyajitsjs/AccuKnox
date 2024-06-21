@@ -93,7 +93,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/search/?name=satya",
+					"raw": "http://localhost:8000/api/search/?query=satyajit",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -106,8 +106,8 @@
 					],
 					"query": [
 						{
-							"key": "name",
-							"value": "satya"
+							"key": "query",
+							"value": "satyajit"
 						}
 					]
 				}
